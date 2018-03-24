@@ -229,6 +229,7 @@ class DinnerListViewController: UIViewController, UITableViewDelegate, UITableVi
         searchcontroller.grouppurpose = grouppurpose
         searchcontroller.groupdescription = groupdescription
         searchcontroller.maximum = maximum
+        searchcontroller.postID = postID
     }
     
     

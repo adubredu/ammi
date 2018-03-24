@@ -151,13 +151,14 @@ class PrivateInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hide_button()
+        
         groupName.text = nameofgroup
         dateOfMeeting.text = meetingdate
         timeOfMeeting.text = meetingtime
-        VenueOfMeeting.text = meetingvenue
-        addressOfVenue.text = meetingaddress
-        nameOfAuthor.text = authorname
-        numGoing.text = numbergoing
+        VenueOfMeeting.text = "Venue:  \(meetingvenue)"
+        addressOfVenue.text = "Address: \(meetingaddress)"
+        nameOfAuthor.text = "Hosted by \(authorname)"
+        numGoing.text = "\(numbergoing) people going"
         purposeOfGroup.text = grouppurpose
         groupDescription.text = groupdescription
         maxNumPeople.text = maximum
@@ -172,7 +173,7 @@ class PrivateInfoViewController: UIViewController {
     func hide_button()
     {
         let ref = Database.database().reference()
-        ref.child("Private_Posts").child(postID).child("peopleGoing").queryOrderedByKey().observe(.value, with: {(snapshot: DataSnapshot)
+        ref.child("Posts").child(postID).child("peopleGoing").queryOrderedByKey().observe(.value, with: {(snapshot: DataSnapshot)
             in
             if snapshot.hasChildren() {
                 let values = snapshot.value as! [String : AnyObject]
@@ -201,4 +202,5 @@ class PrivateInfoViewController: UIViewController {
         })
         ref.removeAllObservers()
     }
+
 }

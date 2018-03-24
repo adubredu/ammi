@@ -230,6 +230,7 @@ class MiscListViewController: UIViewController, UITableViewDelegate, UITableView
         searchcontroller.grouppurpose = grouppurpose
         searchcontroller.groupdescription = groupdescription
         searchcontroller.maximum = maximum
+        searchcontroller.postID = postID
     }
     
     

@@ -221,7 +221,14 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hide_private()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

@@ -38,6 +38,7 @@ class EditProfileViewController: UIViewController {
         {
             let updates =
             [
+                "user_name" : username,
                 "classYear" : classYear,
                 "major" : MajorName,
                 "profile_picture" : self.pictureUrl

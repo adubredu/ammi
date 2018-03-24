@@ -45,9 +45,9 @@ class MyGroupsInfoViewController: UIViewController {
         groupName.text = nameofgroup
         dateOfMeeting.text = meetingdate
         timeOfMeeting.text = meetingtime
-        VenueOfMeeting.text = meetingvenue
-        addressOfVenue.text = meetingaddress
-        numGoing.text = numbergoing
+        VenueOfMeeting.text = "Venue:  \(meetingvenue)"
+        addressOfVenue.text = "Address: \(meetingaddress)"
+        numGoing.text = "\(numbergoing) people going"
         purposeOfGroup.text = grouppurpose
         groupDescription.text = groupdescription
         maxNumPeople.text = maximum

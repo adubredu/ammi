@@ -147,8 +147,8 @@ class MyGroupsListViewController: UIViewController, UITableViewDelegate, UITable
         cell.purposeOfAmmi.text = self.posts[indexPath.row].ammi_purpose
         cell.goingImage.image = UIImage(named:"greencheck")
         cell.numGoing.text = "\(self.posts[indexPath.row].noGoing!) people going"
-        cell.date.text = self.current_posts[indexPath.row].ammi_date
-        cell.time.text = self.current_posts[indexPath.row].ammi_time
+        cell.date.text = self.posts[indexPath.row].ammi_date
+        cell.time.text = self.posts[indexPath.row].ammi_time
         
         
         let imgURL = self.posts[indexPath.row].authorProfilePic
@@ -182,11 +182,11 @@ class MyGroupsListViewController: UIViewController, UITableViewDelegate, UITable
         if (self.posts[indexPath.row].ammi_name) != nil {
             nameofgroup = self.posts[indexPath.row].ammi_name}
 
-        if (self.current_posts[indexPath.row].ammi_date) != nil {
-            meetingdate = self.current_posts[indexPath.row].ammi_date}
+        if (self.posts[indexPath.row].ammi_date) != nil {
+            meetingdate = self.posts[indexPath.row].ammi_date}
         
-        if (self.current_posts[indexPath.row].ammi_time) != nil {
-            meetingtime = self.current_posts[indexPath.row].ammi_time}
+        if (self.posts[indexPath.row].ammi_time) != nil {
+            meetingtime = self.posts[indexPath.row].ammi_time}
 
         if (self.posts[indexPath.row].ammi_location) != nil {
             meetingvenue = self.posts[indexPath.row].ammi_location}

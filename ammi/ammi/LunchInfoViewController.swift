@@ -87,7 +87,7 @@ class LunchInfoViewController: UIViewController {
             
             if snapshot.hasChildren()
             {
-                let updateGoing : [String : Any] = ["peopleGoing/\(autoKey)" : self.userID]
+                let updateGoing : [String : Any] = ["peopleGoing/\(autoKey)" : self.userID!]
                 ref.child("Posts").child(self.postID).updateChildValues(updateGoing, withCompletionBlock: { (error, reff)
                     in
                     
@@ -149,14 +149,15 @@ class LunchInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hide_button()
 
         groupName.text = nameofgroup
         dateOfMeeting.text = meetingdate
         timeOfMeeting.text = meetingtime
-        VenueOfMeeting.text = meetingvenue
-        addressOfVenue.text = meetingaddress
-        nameOfAuthor.text = authorname
-        numGoing.text = numbergoing
+        VenueOfMeeting.text = "Venue:  \(meetingvenue)"
+        addressOfVenue.text = "Address: \(meetingaddress)"
+        nameOfAuthor.text = "Hosted by \(authorname)"
+        numGoing.text = "\(numbergoing) people going"
         purposeOfGroup.text = grouppurpose
         groupDescription.text = groupdescription
         maxNumPeople.text = maximum
@@ -200,5 +201,6 @@ class LunchInfoViewController: UIViewController {
         })
         ref.removeAllObservers()
     }
+
 
 }

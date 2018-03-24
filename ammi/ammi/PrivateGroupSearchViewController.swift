@@ -99,7 +99,7 @@ class PrivateGroupSearchViewController: UIViewController {
         searchcontroller.groupdescription = groupdescription
         searchcontroller.maximum = maximum
         searchcontroller.postID = postID
-        print(postID)
+        
     }
     
     override func viewDidLoad()

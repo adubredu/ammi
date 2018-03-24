@@ -89,6 +89,7 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
             databaseRef.child("user_profile").child(userID).observe(.value, with: { (snapshot:DataSnapshot) in
                 let values = snapshot.value as? NSDictionary
                 
+                self.name.text = values?["user_name"] as? String
                 self.classYear.text = values?["classYear"] as? String
                 self.major.text = values?["major"] as? String
                 
@@ -117,6 +118,7 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
                 
                 
                 self.name.text = first_name
+                self.myusername = first_name
                 self.pictureurl = profilepicture
                 
                 if let url = URL(string: profilepicture)

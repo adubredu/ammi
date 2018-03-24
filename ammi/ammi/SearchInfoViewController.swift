@@ -155,10 +155,10 @@ class SearchInfoViewController: UIViewController {
         groupName.text = nameofgroup
         dateOfMeeting.text = meetingdate
         timeOfMeeting.text = meetingtime
-        VenueOfMeeting.text = meetingvenue
-        addressOfVenue.text = meetingaddress
-        nameOfAuthor.text = authorname
-        numGoing.text = numbergoing
+        VenueOfMeeting.text = "Venue:  \(meetingvenue)"
+        addressOfVenue.text = "Address: \(meetingaddress)"
+        nameOfAuthor.text = "Hosted by \(authorname)"
+        numGoing.text = "\(numbergoing) people going"
         purposeOfGroup.text = grouppurpose
         groupDescription.text = groupdescription
         maxNumPeople.text = maximum

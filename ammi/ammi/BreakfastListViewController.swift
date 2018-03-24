@@ -229,6 +229,7 @@ class BreakfastListViewController: UIViewController, UITableViewDelegate, UITabl
         searchcontroller.grouppurpose = grouppurpose
         searchcontroller.groupdescription = groupdescription
         searchcontroller.maximum = maximum
+        searchcontroller.postID = postID
     }
     
     

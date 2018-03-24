@@ -239,6 +239,7 @@ class StudyListViewController: UIViewController, UITableViewDelegate, UITableVie
         searchcontroller.grouppurpose = grouppurpose
         searchcontroller.groupdescription = groupdescription
         searchcontroller.maximum = maximum
+        searchcontroller.postID = postID
     }
     
 
