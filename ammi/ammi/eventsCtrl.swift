@@ -2,7 +2,7 @@
 //  eventsCtrl.swift
 //  ammi
 //
-//  Created by Alphonsus Adu-Bredu on 9/1/17.
+//  Created by Alphonsus Adu-Bredu and David Ngetich on 9/1/17.
 //  Copyright © 2017 ammi team. All rights reserved.
 //
 
@@ -80,6 +80,15 @@ class eventsCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.databaseRef.removeAllObservers()
         
         
+        ////////////////////////////////////////
+        
+        
+        
+        /////////////////////////////
+        
+        
+        
+        
         //////////////////////////////////
         
         databaseRef.child("Private_Posts").queryOrderedByKey().observe(.value, with: { (snapshot: DataSnapshot)
@@ -113,9 +122,6 @@ class eventsCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             
                             self.tableview.reloadData()
                         }
-                        
-                        
-                       
                     }
                     
                 }
@@ -138,12 +144,14 @@ class eventsCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
         fetchPosts()
     }
 
+  
     
-//    func updateEvents() {
-//        databaseRef.child("user_profile").child(userID).updateChildValues(["events_attending":postD])
-//    }
+    /*
+    func updateEvents() {
+        databaseRef.child("user_profile").child(userID).updateChildValues(["events_attending":postD])
+   }
     
-   
+   */
 
     
     
@@ -197,19 +205,13 @@ class eventsCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
         fetchPosts()
     }
     
-    
-    
-    
-    
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
+    /******************************************************
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -217,6 +219,6 @@ class eventsCtrl: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    *****************************************************/
 
 }

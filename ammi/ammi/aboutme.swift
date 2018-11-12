@@ -44,7 +44,8 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var editOut: UIButton!
 
-   
+    @IBOutlet weak var logOut: UIButton!
+    
     
     
     @IBAction func editButton(_ sender: Any)
@@ -54,6 +55,7 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        //do the prepare to move the data to the next view controller
         if segue.identifier == "goToEdit"
         {
             let gotoedit = segue.destination as! EditProfileViewController
@@ -75,6 +77,8 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         fetchProfile()
         loadProfile()
+        editOut.layer.cornerRadius = 5.0
+        logOut.layer.cornerRadius = 5.0
         
        
         }
@@ -169,7 +173,6 @@ class aboutme: UIViewController, UINavigationControllerDelegate {
         imageView.image = imageToSet
     }
 
- 
     
     
     override func didReceiveMemoryWarning() {

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  ammi
 //
-//  Created by Alphonsus Adu-Bredu on 8/29/17.
+//  Created by Alphonsus Adu-Bredu and David Ngetich on 8/29/17.
 //  Copyright © 2017 ammi team. All rights reserved.
 //
 
@@ -30,9 +30,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     {
         
         super.viewDidLoad()
+        customLogin.layer.cornerRadius = 7.0
         setupFacebookButtons()
     }
     
+    
+    //import thr data from the fb login
     
     @IBAction func customLoginIsPressed(_ sender: Any)
     {
@@ -114,7 +117,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     }
 
 
-    
+    //set up the facebook buttons for facilitating loggin in
     fileprivate func setupFacebookButtons()
     {
         view.addSubview(loginButton)
@@ -129,8 +132,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate{
     
     
     
-    
-    
+    //when the log in button is pressed
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult, error: Error!)
     {
       

@@ -2,7 +2,7 @@
 //  activities.swift
 //  buddy
 //
-//  Created by Alphonsus Adu-Bredu on 7/18/17.
+//  Created by Alphonsus Adu-Bredu and David Ngetich on 7/18/17.
 //  Copyright © 2017 Buddy team. All rights reserved.
 //
 

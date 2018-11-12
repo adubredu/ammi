@@ -58,7 +58,12 @@ class DiningCollectionViewCell: UICollectionViewCell {
                                     self.cancelOut.isHidden = false
                                     self.goingOut.isEnabled = true
                                 self.collectionview.reloadData()
-                                                                    }
+                                    
+                                
+                                
+                                
+                                
+                                }
                                 
                             }
                             

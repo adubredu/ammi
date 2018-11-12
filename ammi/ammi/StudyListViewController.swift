@@ -42,6 +42,8 @@ class StudyListViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
 
+    
+    //fetches all the required data for the group
     func fetchPosts()
     {
         
@@ -113,6 +115,7 @@ class StudyListViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    //function to filter through the study posts
     func filterStudyPosts()
     {
         current_posts = posts

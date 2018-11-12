@@ -122,6 +122,7 @@ class LunchInfoViewController: UIViewController {
 
     }
     
+    // declaration of the variables for the l/s
     @IBOutlet weak var dateOfMeeting: UILabel!
     @IBOutlet weak var timeOfMeeting: UILabel!
     @IBOutlet weak var VenueOfMeeting: UILabel!

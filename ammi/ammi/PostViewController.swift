@@ -2,7 +2,7 @@
 //  PostViewController.swift
 //  ammi
 //
-//  Created by Alphonsus Adu-Bredu on 1/7/18.
+//  Created by Alphonsus Adu-Bredu and David Ngetich on 1/7/18.
 //  Copyright © 2018 ammi team. All rights reserved.
 //
 
@@ -35,6 +35,9 @@ class PostViewController: UIViewController {
     let databaseRef = Database.database().reference()
     
     @IBOutlet weak var passcodeField: UIStackView!
+    
+    
+    @IBOutlet weak var clearButton: UIButton!
     
     @IBAction func clearIsPressed(_ sender: Any)
     {
@@ -94,7 +97,7 @@ class PostViewController: UIViewController {
             let userID = Auth.auth().currentUser!.uid
             databaseRef.child("user_profile").child(userID).observe(.value, with: { (snapshot:DataSnapshot) in
                 
-                //create a dictionary of user's profile data //let values
+                //create a dictionary of user's profile data i.e //let values
                 let value = snapshot.value as! [String : AnyObject]
                 let profile_pic = value["profile_picture"] as? String //Auth.auth().currentUser?.photoURL?.absoluteString
                 
@@ -215,7 +218,8 @@ class PostViewController: UIViewController {
             hide_private()
         }
     }
-    
+   
+    //override and write new overload func to let the prepare functional nd  
 
     
     override func viewDidLoad() {
@@ -224,13 +228,16 @@ class PostViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     
+        clearButton.layer.cornerRadius = 20.0
+        createButton.layer.cornerRadius = 20.0
     }
     
     func dismissKeyboard()
     {
         view.endEditing(true)
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
