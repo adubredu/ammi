@@ -1,2 +1,2 @@
 ammi
-Application to help college freshmen to transition into college easily
+iOS app to help college freshmen to transition into college easily
